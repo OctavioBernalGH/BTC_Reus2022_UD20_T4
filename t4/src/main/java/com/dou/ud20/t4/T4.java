@@ -41,20 +41,22 @@ public class T4 implements WindowListener{
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		//Declarations
 		frame = new JFrame();
+		txtrTextoInicial = new JTextArea();
+		JLabel lblTittle = new JLabel("Eventos");
+		
+		//Parametring
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		frame.addWindowListener(this);
-		
-		
-		txtrTextoInicial = new JTextArea();
 		txtrTextoInicial.setText("Texto inicial");
 		txtrTextoInicial.setBounds(111, 50, 206, 177);
-		frame.getContentPane().add(txtrTextoInicial);
-		
-		JLabel lblTittle = new JLabel("Eventos");
 		lblTittle.setBounds(106, 22, 61, 16);
+		
+		//Adding to frame
+		frame.getContentPane().add(txtrTextoInicial);
 		frame.getContentPane().add(lblTittle);
 	}
 
